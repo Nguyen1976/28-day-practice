@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #4daf54;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: "Poppins";
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    position: relative;
+}
+
+.card__heart, .card__cart {
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.card__cart {
+    left: unset;/*Loại bỏ thuộc tính left*/
+    right: 20px;
+}
+
+.card__img {
+    width: 90%;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*Để ảnh đúng theo tỉ lệ mà không bị bóp méo*/
+    
+
+}
+
+.card__title, .card__price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card__title {
+    color: var(--primary-color);
+}
+
+.card__color, .card__size {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card__size span {
+    padding: 1px 10px;
+    background-color: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.card__color span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.card__color-green {
+    background: green;
+}
+
+.card__color-red {
+    background: red;
+}
+
+.card__color-black {
+    background: black;
+}
+
+.card__action button {
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card__action button:hover {
+    transform: scale(0.9);
+    transition-delay: 0.1s; 
+}
+
+.card:hover .card__img {
+    transform: translateY(-90px) rotate(-15deg);
+}
+
+.card:hover .card__title {
+    transform: translate(-38px, -72px);
+}
+
+.card:hover .card__price {
+    transform: translate(-117px, -72px);
+}
+
+.card__size {
+    margin-top: 155px;
+}
+
+.card__size, .card__color, .card__action {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover .card__size,
+.card:hover .card__color,
+.card:hover .card__action {
+    visibility: visible;
+    opacity: 100;
+    transition-delay: 0.4s;
+}
+
+.card:hover .card__size {
+    margin-top: 0px;
+}
+
+span {
+    cursor: pointer;
+}
+
+i {
+    cursor: pointer;
+    z-index: 1;
+}
