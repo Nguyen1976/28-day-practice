@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    
+}
+
+.open-modal-btn {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;/*ĐỊnh vị modal so với cửa sổ trình duyệt*/
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.modal__inner {
+    width: 400px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: modalShow linear .5s;
+}
+
+.modal__header {
+    background-color: rgba(255, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+}
+
+.modal__header i {
+    cursor: pointer;
+}
+
+.modal__body {
+    padding: 10px;
+}
+
+.modal__body h2 {
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.modal__body p {
+    padding: 10px 0;
+}
+
+.modal__footer {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal__footer button {
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -200px;
+        opacity: 0;
+    } 
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}

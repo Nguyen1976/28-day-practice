@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <button class="open-modal-btn">Open Modal</button>
+    <div class="modal">
+        <div class="modal__inner">
+            <div class="modal__header">
+                Welcomde to Nodemy
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="modal__body">
+                <h2>Modal</h2>
+                <p>
+                    Đây là phần body của modal
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button>Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modalBtn = document.querySelector(".open-modal-btn");
+        var modal = document.querySelector(".modal");
+        var iconBtn = document.querySelector(".modal__header i");
+        var closeBtn = document.querySelector(".modal__footer button");
+
+
+
+        // modalBtn.onclick = function(e) {
+        //     modal.classList.remove('hide');
+        // }
+
+        // iconBtn.onclick = function(e) {
+        //     modal.classList.add('hide');
+        // }
+
+        // closeBtn.onclick = function(e) {
+        //     modal.classList.add('hide');
+        // }
+
+        function toggle() {
+            modal.classList.toggle('hide');
+        }
+        modalBtn.addEventListener('click', toggle)
+        iconBtn.addEventListener('click', toggle)
+        closeBtn.addEventListener('click', toggle)
+        modal.addEventListener('click', function(e) {//e.currentTarget là phần tử mà bộ lắng nghe sự kiện được gắn vào
+            if(e.target === e.currentTarget) {
+                toggle();
+            } 
+        })
+    </script>
+</body>
+</html>
