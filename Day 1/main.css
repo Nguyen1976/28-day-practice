@@ -47,8 +47,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;/*Để ảnh đúng theo tỉ lệ mà không bị bóp méo*/
-    
-
 }
 
 .card__title, .card__price {

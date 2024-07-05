@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image">
+            <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/2.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/3.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/2.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/3.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="./img/2.jpg" alt="">
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="gallery__inner">
+            <img src="" alt="">
+        </div>
+        <div class="control prev"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="control right"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.image img');
+        const gallery = document.querySelector('.gallery');
+        const galleryImg = document.querySelector('.gallery__inner img');
+        const close = document.querySelector('.close');
+        const controlPrev = document.querySelector('.control.prev');
+        const controlNext = document.querySelector('.control.right');
+
+
+        var currentIndex = 0;
+        console.log(images);
+        function galleryShow() {
+            if(currentIndex === 0) {
+                controlPrev.classList.add('hide');
+            } else {
+                controlPrev.classList.remove('hide');
+            }
+
+            if(currentIndex === 7) {
+                controlNext.classList.add('hide');
+            } else {
+                controlNext.classList.remove('hide');
+
+            }
+
+
+            galleryImg.src = images[currentIndex].src;
+            gallery.classList.add('show');
+        }
+
+        images.forEach((image, index) => {//Lấy toàn bộ img
+            image.addEventListener('click', () => {
+                currentIndex = index;
+                galleryShow();
+            });
+        });
+
+        close.addEventListener('click', () => {
+            gallery.classList.remove('show');
+        });
+
+        document.addEventListener('keydown', (e) => {//Lắng nghe sự kiện trên bàn phím
+            if(e.keyCode === 27) {//Key code là mã bàn phím
+                gallery.classList.remove('show');
+            } 
+        })
+
+        controlPrev.addEventListener('click', () => {
+            if(currentIndex > 0){
+                currentIndex--;
+                galleryShow()
+            }
+            
+        })
+
+        controlNext.addEventListener('click', () => {
+            if(currentIndex < 7){
+                currentIndex++;
+                galleryShow();
+            }
+        })
+    </script>
+</body>
+</html>
