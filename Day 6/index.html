@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <button class="alert">
+        Press Any Key
+    </button>
+    <div class="box hide">
+        <div class="result">
+            40
+        </div>
+        <div class="detail">
+            <div class="card key">
+                <p>Key</p>
+                <p>Space</p>
+            </div>
+            <div class="card location">
+                <p>Location</p>
+                <p>Space</p>
+            </div>
+            <div class="card which">
+                <p>Which</p>
+                <p>Space</p>
+            </div>
+            <div class="card code">
+                <p>Code</p>
+                <p>Space</p>
+            </div>
+        </div>  
+    </div>
+    <script>
+        var eKey = document.querySelector('.card.key p:last-child');
+        var eLocation = document.querySelector('.card.location p:last-child');
+        var eWhich = document.querySelector('.card.which p:last-child');
+        var eCode = document.querySelector('.card.code p:last-child');
+        var alert = document.querySelector('.alert');
+        var box = document.querySelector('.box');
+        var result = document.querySelector('.result')
+
+        document.addEventListener('keydown', e => {
+            eKey.innerText = e.key;
+            eLocation.innerText = e.location;
+            eWhich.innerText = e.which;
+            eCode.innerText = e.code;
+            result.innerText = e.code;
+
+            alert.classList.add('hide');
+            box.classList.remove('hide');
+        })
+    </script>
+</body>
+</html>
