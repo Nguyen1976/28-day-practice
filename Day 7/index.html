@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="title">Search tags</h2>
+        <div class="content">
+            <ul></ul>
+            <input type="text" placeholder="Type and Enter">
+        </div>
+        <button class="remove">Remove all</button>
+    </div>
+
+    <script>
+        var content = document.querySelector('.content');
+        var input = document.querySelector('input');
+        var btnRemoveAll = document.querySelector('button.remove');
+        ulContent = document.querySelector('ul');
+
+        var tags = ['Nodejs', 'Reactjs'];
+
+        function render() {
+            htmls = '';
+            tags.forEach(function(tag, index) {
+                htmls += `<li>
+                                ${tag}
+                                <i class="fa-solid fa-xmark" onclick="removeTag(${index})"></i>
+                            </li>`;
+            });
+            
+            ulContent.innerHTML = htmls;
+        }
+
+        function removeTag(index) {
+            tags.splice(index, 1);//splice để xóa mảng splice(vị trị cần xóa, số lượng cần xóa);
+            render();
+        }
+
+        
+        btnRemoveAll.addEventListener('click', function() {
+            tags = [];
+            render();
+        })
+        
+
+        render();
+
+        input.addEventListener('keydown', function(e) {
+            if(e.key === 'Enter') {
+               tags.push(this.value.trim());
+               input.value = '';
+               render();
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>

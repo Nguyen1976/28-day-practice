@@ -91,3 +91,12 @@ img {
 .hide {
     display: none;
 }
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
