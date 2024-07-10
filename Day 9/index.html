@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div id="weather">
         <input type="text" class="search">
         <div class="content">
-            
+            <h1 class="capital">
+                <span class="city"></span>
+                <span>,</span>
+                <span class="country">VN</span>
+            </h1>
+
+            <div class="time">12/24/2021, 3:25:16 PM</div>
+            <div class="temperature">
+                <span class="value">23<sup>o</sup>C</span>
+            </div>
+
+            <div class="short-desc">Clouds</div>
+            <div class="more-desc">
+                <div class="visibility">
+                    <i class="fas fa-eye"></i>
+                    <span>10 km</span>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span></span>
+                </div>
+                <div class="sun">
+                    <i class="fas fa-sun"></i>
+                    <span>07:00 AM</span>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="./main.js"></script>
