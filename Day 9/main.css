@@ -20,6 +20,38 @@ body {
     background: url(./cold.png) no-repeat center/cover;
 }
 
+.hot {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./hot.png) no-repeat center/cover;
+}
+
+.hot #weather {
+    background: url(./hot.png) no-repeat center/cover;
+}
+
+.cold {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./cold.png) no-repeat center/cover;
+}
+
+.cold #weather {
+    background: url(./cold.png) no-repeat center/cover;
+}
+
+.cool {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./cool.png) no-repeat center/cover;
+}
+
+.cool #weather {
+    background: url(./cool.png) no-repeat center/cover;
+}
+
+.warm {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(./warm.png) no-repeat center/cover;
+}
+
+.warm #weather {
+    background: url(./warm.png) no-repeat center/cover;
+}
+
 .search {
     width: 100%;
     padding: 10px 20px;
@@ -41,6 +73,7 @@ body {
     text-align: center;
     color: #fff;
     margin: 40px 0;
+    transition: 0.4s;
 }
 
 .content .capital {
@@ -59,7 +92,7 @@ body {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 10px;
-    margin: 0 30px;
+    margin: 15px 30px;
     padding: 20px;
 }
 
@@ -83,4 +116,9 @@ body {
 
 .more-desc div i {
     margin: 5px 0;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
 }
