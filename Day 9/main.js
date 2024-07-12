@@ -49,7 +49,6 @@ async function changeWeatherUI(input) {//async để khải báo hàm bất đ�
         console.log('not found');
         content.classList.add('hide')
     }
-       
 }
 
 changeWeatherUI();
