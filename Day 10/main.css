@@ -5,5 +5,76 @@
 }
 
 body {
+    height: 100vh;
+    background: linear-gradient(to right, #ffe000, #799f0c);
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding-top: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+form {
+    border-bottom: 1px solid #aaa;
+    padding: 10px 20px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    font-size: 24px;
+    width: 100%;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+
+form button {
+    background-color: yellowgreen;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.todos {
+
+}
+
+.todos li {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    align-items: center;
+    font-size: 22px;
     
+
+}
+
+.todos li span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+li.completed {
+    color: #aaa;
+}
+
+li.completed span{
+    text-decoration: line-through;
 }

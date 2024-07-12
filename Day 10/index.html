@@ -5,9 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <form action="">
+            <input type="text" placeholder="Enter some task">
+            <button type="submit">Add</button>
+        </form>
+        <ul class="todos">
+            
+        </ul>
+    </div>
     <script>
+        var input = document.querySelector('input');
+        var button = document.querySelector('button');
+        var form = document.querySelector('form');
+        var todos = document.querySelector('.todos');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let val = input.value.trim();
+            if(val) {
+                addTodoElement({
+                    text: val,
+                });
+                saveTodoList();
+            }
+            input.value = '';
+
+
+        })
+
+        function addTodoElement(todo) {
+            /*
+            text: text,
+            status: status
+            */
+           var li = document.createElement('li');
+           li.innerHTML = `<span>${todo.text}</span>
+                            <i class="fa-solid fa-trash-can"></i>`
+            li.setAttribute('class', '');
+            if(todo.status === 'completed') {
+                li.setAttribute('class', 'completed');
+            }
+            li.addEventListener('click', function() {
+                this.classList.toggle('completed');
+                saveTodoList();
+            })
+            li.querySelector('i').addEventListener('click', function() {
+                this.parentElement.remove();
+                saveTodoList();
+            });
+
+
+            todos.appendChild(li);
+        }
+
+        function saveTodoList() {
+            let todoList = document.querySelectorAll('li');
+            let todoStorage = [];
+
+            todoList.forEach(function(item) {
+                let value = item.querySelector('span').innerText;
+                let status = item.getAttribute('class');
+                
+                todoStorage.push({
+                    text: value,
+                    status: status,
+                });
+            })
+
+            localStorage.setItem('todoList', JSON.stringify(todoStorage));
+        }
+
+        function init() {
+            let data = JSON.parse(localStorage.getItem('todoList'));
+            data.forEach(function(item) {
+                addTodoElement(item);
+            })
+        }
+        init();
+
         
     </script>
 </body>
