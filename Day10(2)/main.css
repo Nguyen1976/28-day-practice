@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #ffe000, #799f0c);
+    font-family: sans-serif;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container {
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.container form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 25px 25px;
+    font-size: 20px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: yellowgreen;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.todos {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+li {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+li span {
+    width: 300px; /* Độ rộng tối đa của phần tử */
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    overflow: hidden; /* Ẩn phần chữ vượt quá */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm */
+}
+
+.completed {
+    text-decoration: line-through; /* Đánh dấu chữ đã hoàn thành */
+    color: gray; /* Màu chữ đã hoàn thành */
+}
