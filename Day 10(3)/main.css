@@ -66,9 +66,10 @@ li span {
     white-space: nowrap; /* Ngăn chữ xuống dòng */
     overflow: hidden; /* Ẩn phần chữ vượt quá */
     text-overflow: ellipsis; /* Thêm dấu ba chấm */
+    cursor: pointer;
 }
 
-.completed {
+.completed span {
     text-decoration: line-through; /* Đánh dấu chữ đã hoàn thành */
     color: gray; /* Màu chữ đã hoàn thành */
 }
