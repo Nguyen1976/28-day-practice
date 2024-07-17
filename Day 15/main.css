@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #dadada;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.container {
+    width: 500px;
+    height: 600px;
+    background: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #dadada;
+    border-radius: 10px; /* Bo tròn phần kéo thanh cuộn */
+}
+
+.container::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 5px;
+    background-color: #fff;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.search {
+    margin-top: 10px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.search input {
+    width: 100%;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.search i {
+    color: #333;
+    padding: 5px;
+}
+
+.product {
+    display: flex;
+    height: 100px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.product img {
+    width: 90px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 10px;
+}
+
+.product .info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product .name,
+.product .price {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product .name {
+    font-weight: bold;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.product:hover {
+    background-color: #dadada;
+}
+
+.hide {
+    display: none;
+}

@@ -66,8 +66,6 @@ img {
     transition: 1s;
 }
 
-
-
 @keyframes slideLeft {
     0% {
         transform: translateX(100%);
@@ -76,6 +74,7 @@ img {
         transform: translateX(0%);
     }
 }
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100%);
