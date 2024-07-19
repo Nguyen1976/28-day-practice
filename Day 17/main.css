@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(103, 95, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    padding: 20px 40px;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(67, 62, 138);
+    border-radius: 10px;
+    box-shadow: -8px 8px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+}
+
+.counter h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
