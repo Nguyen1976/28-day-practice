@@ -1,0 +1,34 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(130deg, rgb(255, 0, 255), rgb(113, 19, 120));
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: white;
+    margin: 10px;
+}
+
+.target {
+    width: 100%;
+    height: 100%;
+    background: url(img1.jpeg);
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh nền */
+    background-size: cover; /* Kích thước hình ảnh nền bao phủ toàn bộ */
+    background-position: center; /* Vị trí hình ảnh nền ở giữa */
+}
+
+.dragimg {
+    border: 2px solid #ccc;
+}
