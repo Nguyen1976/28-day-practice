@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.tool {
+    background-color: rgb(111, 111, 214);
+    display: flex;
+    align-items: center;
+}
+
+.tool > * {/*con trực tiếp*/
+    height: 40px;
+    width: 40px;
+    background: white;
+    margin: 5px;
+    font-size: 20px;
+}
+
+#save {
+    margin-left: auto;
+}
+
+canvas {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="tool">
+        <input id="color" type="color">
+        <button id="eraser">
+            <i class="fa-solid fa-eraser"></i>
+        </button>
+        <button id="deccrease">-</button>
+        <button id="size">5</button>
+        <button id="increase">+</button>
+        <a id="save" download="tenfile.png">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </a>
+        <button id="clear">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="container">
+        <canvas class="content" width="600" height="600">
+    </div>
+
+    </canvas>
+    <script src="./main.js"></script>
+</body>
+</html>
