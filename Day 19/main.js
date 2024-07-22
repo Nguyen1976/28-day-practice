@@ -94,5 +94,3 @@ save.addEventListener('click', function() {
     save.setAttribute('href', output);
     save.click();
 })
-
-//init
