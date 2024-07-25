@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+/* 
+#result {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+} */
+
+#mirror {
+    width: 100px;
+    height: 100px;
+    background-image: url('./2cIp-bike1.jpg');
+    background-size: 1000px 1000px;
+    background-repeat: no-repeat;
+    position: fixed;
+    transform: translate(-90%, -90%);
+    border-radius: 50%;
+    border: 1px solid black;
+
+}

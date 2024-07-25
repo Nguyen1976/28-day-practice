@@ -39,30 +39,35 @@ imgList.forEach(item => {
     })
 })
 
-btnList.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        let type = e.target.getAttribute('type-food');
-        btnList.forEach(btn => {
-            if(btn.getAttribute('type-food') === type) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        })
-        render(type);
+
+function active(type) {
+    btnList.forEach(btn => {
+        if(btn.getAttribute('type-food') === type) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
     })
-})
+}
 
 function render(type) {
     var html = arr.map(item => {
-        if(item.foodType === type || type === 'all') {
-            return `
-                <div class="food-item" type-food="${item.foodType}">
+            return (item.foodType === type || type === 'all') 
+            ? `<div class="food-item" type-food="${item.foodType}">
                     <img src="${item.src}" alt="">
-                </div>
-            `
-        }
-    }).join(' ');
+                </div>`
+            : '';
+    }).join('')
+    
+
     document.querySelector('.food-list').innerHTML = html;
 }
-console.log(arr)
+
+
+btnList.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        let type = e.target.getAttribute('type-food');
+        active(type);
+        render(type);
+    })
+})
