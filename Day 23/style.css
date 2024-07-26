@@ -20,14 +20,14 @@ img {
 } */
 
 #mirror {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     background-image: url('./2cIp-bike1.jpg');
     background-size: 1000px 1000px;
     background-repeat: no-repeat;
     position: fixed;
-    transform: translate(-90%, -90%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 1px solid black;
-
+    pointer-events: none;
 }
