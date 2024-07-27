@@ -17,7 +17,7 @@ for(let i = 0; i < 200; i++) {
         setTimeout(function() {
             el.style.backgroundColor = '';
             el.style.boxShadow = ''
-        }, 1000);
+        }, 300);
 
     })
 }
