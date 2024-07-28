@@ -1,0 +1,83 @@
+:root {
+    --primary-color: rgb(40, 75, 40);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(145deg, #569377 50%, #dbede5 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-input {
+    box-shadow:  0 0 2px rgba(0, 0, 0, 0.4);
+    padding: 0px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.form-input input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+button {
+    margin-left: 20px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    overflow: none;
+    border: none;
+    color: white;
+}
+
+.validator {
+    margin-top: 30px;
+    background: rgba(40, 75, 40, 0.5);
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    box-shadow:  0 0 2px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+.validator p {
+    margin: 5px;
+}
+
+.validator p::before {
+    content: '\f00d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    padding: 10px;
+}
+
+.validator p.valid {
+    color: #ccc;
+}
+
+.validator p.valid::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    padding: 10px;
+    color: white;
+}
