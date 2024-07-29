@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --facebook-color: #3b5999;
+    --instargram-color: #e1306c;
+    --youtube-color: #de463b;
+    --twitter-color: #46c1f6;
+    --github-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 0px 30px;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 0 30px;
+    line-height: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    opacity: 0;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+    pointer-events: none;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.icon:hover .tooltip {
+    transform: translateY(-150%);
+    opacity: 1;
+}
+
+.facebook .tooltip,
+.facebook .tooltip::before {
+    background: var(--facebook-color);
+}
+
+.instargram .tooltip,
+.instargram .tooltip::before {
+    background: var(--instargram-color);
+}
+
+.youtube .tooltip,
+.youtube .tooltip::before {
+    background: var(--youtube-color);
+}
+
+.twitter .tooltip,
+.twitter .tooltip::before {
+    background: var(--twitter-color);
+}
+
+.github .tooltip,
+.github .tooltip::before {
+    background: var(--github-color);
+}
