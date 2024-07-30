@@ -66,13 +66,13 @@ button {
 
 }
 
-.loading {
+.loading .animate {
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
-.loading::before {
+.loading .animate::before{
     content: '';
     position: absolute;
     top: 0;
@@ -85,12 +85,11 @@ button {
 		rgba(255, 255, 255, 0.1),
 		rgba(255, 255, 255, 0.9)
 	);
-    animation: loading linear infinite 0.9s;
-    z-index: 1;
+    animation: loading linear 0.5s infinite;
 }
 
 @keyframes loading {
-    0%{
+    0% {
         transform: translateX(-100%);
     }
     100% {
